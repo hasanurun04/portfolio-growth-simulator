@@ -215,16 +215,24 @@
         .save-container {
             display: flex;
             gap: 10px;
-            align-items: center;
+            align-items: stretch;
         }
 
         .save-input {
             flex: 1;
+            display: flex;
+            align-items: stretch;
+        }
+
+        .save-input input {
+            margin: 0;
         }
 
         .save-btn {
             background-color: #81ecec;
             color: #222222;
+            margin-top: 0;
+            white-space: nowrap;
         }
 
         .save-btn:hover {
@@ -290,6 +298,8 @@
             color: #222222;
             padding: 8px 16px;
             margin-left: 10px;
+            margin-top: 0;
+            white-space: nowrap;
         }
 
         .load-btn:hover {
@@ -344,6 +354,33 @@
             }
         }
 
+        .footer {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            color: #888888;
+            font-size: 14px;
+            line-height: 1.8;
+            background-color: #252525;
+            border-radius: 10px;
+        }
+
+        .footer a {
+            color: #74b9ff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: #0984e3;
+            text-decoration: underline;
+        }
+
+        .footer img {
+            vertical-align: middle;
+        }
+
         @media (max-width: 480px) {
             body {
                 padding: 10px;
@@ -360,6 +397,11 @@
 
             .chart-container {
                 height: 250px;
+            }
+
+            .footer {
+                font-size: 12px;
+                padding: 15px;
             }
         }
     </style>
@@ -435,6 +477,10 @@
                 <canvas id="growthChart"></canvas>
             </div>
         </div>
+    </div>
+
+    <div class="footer">
+        <a href="https://github.com/hasanurun04/portfolio-growth-simulator">Portfolio Growth Simulator</a> © 2025 by <a href="https://www.linkedin.com/in/bayramhasanurun/">Bayram Hasan Urun</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
     </div>
 
 
