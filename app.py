@@ -5,7 +5,6 @@ getcontext().prec = 28
 
 app = Flask(__name__, static_folder="static", template_folder="templates")
 
-
 def calc_growth(initial_amount, default_profit, default_days, additional_periods):
 
     profit_schedule = []
@@ -59,11 +58,9 @@ def calc_growth(initial_amount, default_profit, default_days, additional_periods
         "summary": summary
     }
 
-
 @app.route("/")
 def index():
     return render_template("index.html")
-
 
 @app.route("/api/calculate", methods=["POST"])
 def api_calculate():
@@ -84,7 +81,6 @@ def api_calculate():
 
     result = calc_growth(initial, default_profit, default_days, add_periods)
     return jsonify(result)
-
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)
